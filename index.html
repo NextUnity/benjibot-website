@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>DownloadMoreRam</title>
+    <style>
+        body {
+            background: #111;
+            color: #eee;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        #downloadBtn {
+            background-color: #00cc66;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #downloadBtn:hover {
+            background-color: #00aa55;
+        }
+
+        .progress-container {
+            width: 60%;
+            margin: 50px auto;
+            background-color: #333;
+            border-radius: 25px;
+            overflow: hidden;
+            display: none;
+        }
+
+        .progress-bar {
+            height: 30px;
+            width: 0%;
+            background-color: #00cc66;
+            transition: width 0.3s;
+        }
+
+        #status {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+
+        footer {
+            margin-top: 80px;
+            font-size: 0.8em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <h1>DownloadMoreRam</h1>
+    <p>Weil du einfach nicht genug RAM haben kannst!</p>
+    <button id="downloadBtn">🧠 RAM herunterladen</button>
+
+    <div class="progress-container" id="progressContainer">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <div id="status"></div>
+
+    <footer>© 2025 DownloadMoreRam Inc. – Garantiert nicht funktionierend 🛠️</footer>
+
+    <script>
+        const button = document.getElementById("downloadBtn");
+        const progressBar = document.getElementById("progressBar");
+        const progressContainer = document.getElementById("progressContainer");
+        const statusText = document.getElementById("status");
+
+        const steps = [
+            "Starte RAM-Download...",
+            "Verbindung zum RAM-Server wird aufgebaut...",
+            "Anfrage nach mehr RAM gesendet...",
+            "Download wird vorbereitet...",
+            "Virtuelle Speicherzellen werden formatiert...",
+            "64MB... 128MB... 256MB...",
+            "RAM-Pakete werden dekomprimiert...",
+            "Finalisiere Installation...",
+            "Fast fertig...",
+            "Download abgeschlossen. Genieße deinen zusätzlichen RAM! 😉"
+        ];
+
+        button.addEventListener("click", () => {
+            button.disabled = true;
+            progressContainer.style.display = "block";
+            let progress = 0;
+            let stepIndex = 0;
+
+            const interval = setInterval(() => {
+                if (progress >= 100) {
+                    clearInterval(interval);
+                    statusText.textContent = steps[steps.length - 1];
+                    return;
+                }
+
+                progress += Math.floor(Math.random() * 10) + 5;
+                if (progress > 100) progress = 100;
+
+                progressBar.style.width = progress + "%";
+
+                if (stepIndex < steps.length - 1) {
+                    statusText.textContent = steps[stepIndex];
+                    stepIndex++;
+                }
+
+            }, 800);
+        });
+    </script>
+</body>
+</html>
