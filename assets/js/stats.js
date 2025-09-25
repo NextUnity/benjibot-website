@@ -4,20 +4,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
   async function fetchUptime() {
     try {
-      const resp = await fetch("https://api.benjibot.de/api/uptime");
-      if (!resp.ok) throw new Error("Netzwerkfehler");
-      const data = await resp.json();
-      // Beispiel: data = { status: "online", uptime: "1234h 12m", ... }
-      statusElem.textContent = data.status ? data.status : "–";
-      durationElem.textContent = data.uptime ? data.uptime : "–";
-    } catch (err) {
-      console.error("Fehler beim Laden der Uptime:", err);
-      statusElem.textContent = "Fehler";
+      const response = await fetch("https://api.benjibot.de/api/uptime");
+      if (!response.ok) throw new Error("API nicht erreichbar");
+
+      const data = await response.json();
+
+      // Uptime anzeigen
+      durationElem.textContent = data.uptime || "unbekannt";
+
+      // Status als "Online", wenn uptime_seconds > 0
+      const isOnline = data.uptime_seconds > 0;
+      statusElem.textContent = isOnline ? "🟢 Online" : "🔴 Offline";
+
+    } catch (error) {
+      console.error("Fehler beim Abrufen der Uptime:", error);
+      statusElem.textContent = "⚠️ Fehler";
       durationElem.textContent = "–";
     }
   }
 
+  // Initial laden
   fetchUptime();
-  // optional: alle 60 Sekunden neu abrufen
+
+  // Wiederhole alle 60 Sekunden
   setInterval(fetchUptime, 60000);
 });
