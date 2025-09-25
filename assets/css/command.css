@@ -1,0 +1,41 @@
+.command-category {
+  margin-bottom: 4rem;
+}
+
+.command-category h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  border-left: 6px solid #5865f2;
+  padding-left: 1rem;
+  color: #fff;
+}
+
+.command-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.command-card {
+  background-color: #2b2d31;
+  border: 2px solid #5865f2;
+  padding: 1.2rem;
+  border-radius: 10px;
+  width: 300px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.command-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px #5865f2;
+}
+
+.command-card h3 {
+  color: #fff;
+  margin: 0 0 0.5rem;
+}
+
+.command-card p {
+  color: #ccc;
+  margin: 0;
+}
