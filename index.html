@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BenjiBot - Dein Discord Helfer</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <title>BenjiBot – Home</title>
+  <link rel="stylesheet" href="assets/css/v1.css" />
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -13,39 +12,86 @@
     <div class="logo">🤖 BenjiBot</div>
     <nav>
       <ul>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#invite">Einladen</a></li>
-        <li><a href="#footer">Kontakt</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="commands.html">Commands</a></li>
+        <li><a href="team.html">Unser Team</a></li>
       </ul>
     </nav>
   </header>
 
   <section class="hero">
-    <h1>Willkommen bei <span>BenjiBot</span></h1>
-    <p>Dein smarter Discord Bot für Moderation, Musik, Spaß und mehr!</p>
-    <a href="#invite" class="btn-primary">🚀 Jetzt Einladen</a>
-  </section>
-
-  <section id="features" class="features">
-    <h2>✨ Features</h2>
-    <div class="feature-list">
-      <div class="feature-card">🎵 Musiksteuerung mit Slash-Commands</div>
-      <div class="feature-card">🛡️ Automod & Anti-Spam-System</div>
-      <div class="feature-card">🎉 Fun Commands & Games</div>
-      <div class="feature-card">📈 Server-Stats & Logging</div>
+    <div class="hero-content">
+      <h1>Willkommen bei <span>BenjiBot</span></h1>
+      <p>Dein vielseitiger Discord Bot — Musik, Moderation, Spaß & mehr</p>
+      <a href="commands.html" class="btn-primary">Alle Commands sehen</a>
+    </div>
+    <div class="hero-image">
+      <img src="img/bot-illustration.png" alt="Bot Illustration" />
     </div>
   </section>
 
-  <section id="invite" class="invite">
-    <h2>🔗 BenjiBot zu deinem Server hinzufügen</h2>
-    <a href="https://discord.com/oauth2/authorize?client_id=DEIN_CLIENT_ID&permissions=8&scope=bot+applications.commands" class="btn-secondary" target="_blank">
-      ➕ BenjiBot Einladen
-    </a>
+  <section class="about">
+    <div class="about-text">
+      <h2>Was macht BenjiBot besonders?</h2>
+      <p>BenjiBot bietet moderne Features wie automatische Moderation, Musiksteuerung, Logging, Spiele und stetige Weiterentwicklung. Unser Ziel ist es, deinen Server zu bereichern.</p>
+      <p>Wir kümmern uns darum, dass dein Server sauber bleibt, Spaß macht und reibungslos läuft.</p>
+    </div>
+    <div class="about-image">
+      <img src="img/about-image.png" alt="Über BenjiBot" />
+    </div>
   </section>
 
-  <footer id="footer" class="footer">
-    <p>&copy; 2025 BenjiBot. Erstellt mit ❤️ für die Discord Community.</p>
-    <p><a href="https://discord.gg/deinserver" target="_blank">Support Server</a></p>
+  <section class="stats">
+    <h2>🔍 Live-Statistiken</h2>
+    <div class="stats-cards">
+      <div class="stat-card">
+        <h3 id="uptime-status">Lädt …</h3>
+        <p>Status</p>
+      </div>
+      <div class="stat-card">
+        <h3 id="uptime-duration">--</h3>
+        <p>Uptime</p>
+      </div>
+      <!-- Weitere Statistiken falls vorhanden -->
+    </div>
+  </section>
+
+  <section class="features">
+    <h2>✨ Beispiele unserer Features</h2>
+    <div class="feature-list">
+      <div class="feature-card">🎵 Musik mit hochwertiger Audioqualität</div>
+      <div class="feature-card">🛡️ Automatische Moderation & Anti-Spam</div>
+      <div class="feature-card">📊 Serverstatistiken & Logging</div>
+      <div class="feature-card">🎮 Minispiele & Fun-Commands</div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-col">
+        <h4>Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="commands.html">Commands</a></li>
+          <li><a href="team.html">Unser Team</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Kontakt</h4>
+        <p><a href="https://discord.gg/deinserver" target="_blank">Support Server</a></p>
+        <p><a href="mailto:kontakt@benjibot.de">kontakt@benjibot.de</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>Rechtliches</h4>
+        <p><a href="#">Impressum</a></p>
+        <p><a href="#">Datenschutz</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 BenjiBot. Alle Rechte vorbehalten.</p>
+    </div>
   </footer>
+
+  <script src="js/stats.js"></script>
 </body>
 </html>
