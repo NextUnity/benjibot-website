@@ -1,67 +1,93 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BenjiBot – Commands</title>
-  <link rel="stylesheet" href="assets/css/v1.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BenjiBot | Commands</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <header class="navbar">
-    <div class="logo">🤖 BenjiBot</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="commands.html">Commands</a></li>
-        <li><a href="team.html">Unser Team</a></li>
-      </ul>
-    </nav>
+
+  <header class="page-header">
+    <h1>📜 BenjiBot Commands</h1>
+    <p>Alle verfügbaren Commands, nach Kategorien sortiert.</p>
   </header>
 
-  <section class="commands-section">
-    <h2>📚 Commands</h2>
-    <div class="command-list">
-      <div class="command-card">
-        <h3>/play &lt;Song&gt;</h3>
-        <p>Spielt einen Song oder fügt ihn der Warteschlange hinzu.</p>
-      </div>
-      <div class="command-card">
-        <h3>/stop</h3>
-        <p>Hört auf zu spielen und leert die Warteschlange.</p>
-      </div>
-      <div class="command-card">
-        <h3>/ban &lt;User&gt;</h3>
-        <p>Bannt einen Nutzer vom Server (mit Berechtigung).</p>
-      </div>
-      <!-- Weitere Commands hier -->
-    </div>
-  </section>
+  <main class="commands-page">
 
+    <!-- === Admin Commands === -->
+    <section class="command-category">
+      <h2>🛠️ Admin Commands</h2>
+      <div class="command-list">
+        <div class="command-card">
+          <h3>/shutdown</h3>
+          <p>Stoppt den Bot vollständig (nur für Owner).</p>
+        </div>
+        <div class="command-card">
+          <h3>/config set</h3>
+          <p>Setzt eine Server-spezifische Konfiguration.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- === Moderation Commands === -->
+    <section class="command-category">
+      <h2>🔨 Moderation</h2>
+      <div class="command-list">
+        <div class="command-card">
+          <h3>/ban [User]</h3>
+          <p>Bannt ein Mitglied vom Server.</p>
+        </div>
+        <div class="command-card">
+          <h3>/kick [User]</h3>
+          <p>Kickt ein Mitglied vom Server.</p>
+        </div>
+        <div class="command-card">
+          <h3>/warn [User]</h3>
+          <p>Verwarnt ein Mitglied.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- === Fun Commands === -->
+    <section class="command-category">
+      <h2>🎉 Fun</h2>
+      <div class="command-list">
+        <div class="command-card">
+          <h3>/meme</h3>
+          <p>Sendet ein zufälliges Meme.</p>
+        </div>
+        <div class="command-card">
+          <h3>/8ball</h3>
+          <p>Antwortet auf deine Fragen mit Zufallsantwort.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- === Utility Commands === -->
+    <section class="command-category">
+      <h2>📚 Utility</h2>
+      <div class="command-list">
+        <div class="command-card">
+          <h3>/uptime</h3>
+          <p>Zeigt die aktuelle Uptime des Bots.</p>
+        </div>
+        <div class="command-card">
+          <h3>/userinfo [User]</h3>
+          <p>Zeigt Informationen über ein Mitglied.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- === Impressum Footer === -->
   <footer class="footer">
-    <!-- denselben Footer wie in index verwenden oder als Include -->
     <div class="footer-content">
-      <div class="footer-col">
-        <h4>Links</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="commands.html">Commands</a></li>
-          <li><a href="team.html">Unser Team</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Kontakt</h4>
-        <p><a href="https://discord.gg/deinserver" target="_blank">Support Server</a></p>
-        <p><a href="mailto:kontakt@benjibot.de">kontakt@benjibot.de</a></p>
-      </div>
-      <div class="footer-col">
-        <h4>Rechtliches</h4>
-        <p><a href="#">Impressum</a></p>
-        <p><a href="#">Datenschutz</a></p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 BenjiBot. Alle Rechte vorbehalten.</p>
+      <p>© 2025 BenjiBot | <a href="mailto:kontakt@benjibot.de">kontakt@benjibot.de</a></p>
+      <p><strong>Impressum:</strong> Max Mustermann · Musterstraße 1 · 12345 Musterstadt · Deutschland</p>
     </div>
   </footer>
+
 </body>
 </html>
