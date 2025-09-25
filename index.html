@@ -2,220 +2,50 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BenjiBot – Dein Discord Allrounder</title>
-  <style>
-    :root {
-      --primary: #5865f2;
-      --background: #2c2f33;
-      --foreground: #23272a;
-      --text: #ffffff;
-      --muted: #99aab5;
-      --card: #2f3136;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--background);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    header {
-      background: var(--foreground);
-      padding: 60px 20px;
-      text-align: center;
-      animation: fadeInDown 1s ease-in-out;
-    }
-
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      color: var(--muted);
-      font-size: 1.2rem;
-      margin-bottom: 20px;
-    }
-
-    .btn {
-      background-color: var(--primary);
-      color: white;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 6px;
-      font-size: 1rem;
-      cursor: pointer;
-      text-decoration: none;
-      transition: background-color 0.3s ease, transform 0.2s ease;
-    }
-
-    .btn:hover {
-      background-color: #4752c4;
-      transform: scale(1.05);
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      background: var(--card);
-      padding: 10px;
-      box-shadow: 0 1px 5px rgba(0,0,0,0.2);
-    }
-
-    nav a {
-      margin: 0 15px;
-      color: var(--muted);
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: var(--primary);
-    }
-
-    section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-      animation: fadeIn 1s ease;
-    }
-
-    h2 {
-      margin-bottom: 20px;
-      color: var(--primary);
-    }
-
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .feature {
-      background-color: var(--card);
-      padding: 20px;
-      border-radius: 10px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .feature:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    }
-
-    .feature h3 {
-      margin-bottom: 10px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: var(--muted);
-      background-color: var(--foreground);
-      margin-top: 40px;
-    }
-
-    /* Animations */
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes fadeInDown {
-      from {
-        opacity: 0;
-        transform: translateY(-30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Responsive Text */
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
-
-      .btn {
-        font-size: 0.9rem;
-        padding: 10px 20px;
-      }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BenjiBot - Dein Discord Helfer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <header>
-    <h1>BenjiBot</h1>
-    <p>Der ultimative Discord Bot für Musik, Moderation, Spaß und mehr</p>
-    <a class="btn" href="#invite">Zu Discord hinzufügen</a>
+  <header class="navbar">
+    <div class="logo">🤖 BenjiBot</div>
+    <nav>
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#invite">Einladen</a></li>
+        <li><a href="#footer">Kontakt</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <nav>
-    <a href="#features">Features</a>
-    <a href="#commands">Befehle</a>
-    <a href="#support">Support</a>
-  </nav>
+  <section class="hero">
+    <h1>Willkommen bei <span>BenjiBot</span></h1>
+    <p>Dein smarter Discord Bot für Moderation, Musik, Spaß und mehr!</p>
+    <a href="#invite" class="btn-primary">🚀 Jetzt Einladen</a>
+  </section>
 
-  <section id="features">
-    <h2>Features</h2>
-    <div class="features">
-      <div class="feature">
-        <h3>🎵 Musik</h3>
-        <p>Spiele Musik direkt von YouTube oder Spotify. Unterstützt Playlists, Queue, und mehr.</p>
-      </div>
-      <div class="feature">
-        <h3>🛡️ Moderation</h3>
-        <p>Automod, Kick/Ban/Warn, Log-Systeme und Anti-Spam-Filter.</p>
-      </div>
-      <div class="feature">
-        <h3>💰 Wirtschaft</h3>
-        <p>Benutzer können Geld verdienen, Jobs annehmen und Items kaufen/verkaufen.</p>
-      </div>
-      <div class="feature">
-        <h3>😂 Fun</h3>
-        <p>Minispiele, Meme-Generator, Trivia, Spaß-Commands und mehr!</p>
-      </div>
+  <section id="features" class="features">
+    <h2>✨ Features</h2>
+    <div class="feature-list">
+      <div class="feature-card">🎵 Musiksteuerung mit Slash-Commands</div>
+      <div class="feature-card">🛡️ Automod & Anti-Spam-System</div>
+      <div class="feature-card">🎉 Fun Commands & Games</div>
+      <div class="feature-card">📈 Server-Stats & Logging</div>
     </div>
   </section>
 
-  <section id="commands">
-    <h2>Beispiel-Befehle</h2>
-    <ul>
-      <li><strong>/play [song]</strong> – Musik abspielen</li>
-      <li><strong>/ban [user]</strong> – Benutzer bannen</li>
-      <li><strong>/balance</strong> – Zeigt dein Kontostand</li>
-      <li><strong>/help</strong> – Alle Befehle anzeigen</li>
-    </ul>
+  <section id="invite" class="invite">
+    <h2>🔗 BenjiBot zu deinem Server hinzufügen</h2>
+    <a href="https://discord.com/oauth2/authorize?client_id=DEIN_CLIENT_ID&permissions=8&scope=bot+applications.commands" class="btn-secondary" target="_blank">
+      ➕ BenjiBot Einladen
+    </a>
   </section>
 
-  <section id="support">
-    <h2>Support & Community</h2>
-    <p>Tritt unserem Support-Server bei, wenn du Hilfe brauchst oder Feedback hast.</p>
-    <a class="btn" href="https://discord.gg/dein-server">Zum Support-Server</a>
-  </section>
-
-  <footer>
-    <p>© 2025 BenjiBot – Alle Rechte vorbehalten.</p>
+  <footer id="footer" class="footer">
+    <p>&copy; 2025 BenjiBot. Erstellt mit ❤️ für die Discord Community.</p>
+    <p><a href="https://discord.gg/deinserver" target="_blank">Support Server</a></p>
   </footer>
-
 </body>
 </html>
