@@ -1,122 +1,153 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <title>DownloadMoreRam</title>
-    <style>
-        body {
-            background: #111;
-            color: #eee;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            text-align: center;
-            padding-top: 100px;
-        }
-
-        h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
-        }
-
-        #downloadBtn {
-            background-color: #00cc66;
-            color: white;
-            padding: 15px 30px;
-            font-size: 1.5em;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        #downloadBtn:hover {
-            background-color: #00aa55;
-        }
-
-        .progress-container {
-            width: 60%;
-            margin: 50px auto;
-            background-color: #333;
-            border-radius: 25px;
-            overflow: hidden;
-            display: none;
-        }
-
-        .progress-bar {
-            height: 30px;
-            width: 0%;
-            background-color: #00cc66;
-            transition: width 0.3s;
-        }
-
-        #status {
-            margin-top: 20px;
-            font-size: 1.2em;
-        }
-
-        footer {
-            margin-top: 80px;
-            font-size: 0.8em;
-            color: #666;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device‑width, initial‑scale=1.0" />
+  <title>BenjiBot – Dein Discord Allrounder</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    header {
+      background-color: #4a90e2;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    nav {
+      margin: 20px 0;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 15px;
+      color: #4a90e2;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #4a90e2;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+    .btn:hover {
+      background-color: #3b78c2;
+    }
+    h2 {
+      color: #4a90e2;
+    }
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .feature {
+      flex: 1 1 200px;
+      background-color: white;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #eee;
+      margin-top: 60px;
+    }
+  </style>
 </head>
 <body>
-    <h1>DownloadMoreRam</h1>
-    <p>Weil du einfach nicht genug RAM haben kannst!</p>
-    <button id="downloadBtn">🧠 RAM herunterladen</button>
-
-    <div class="progress-container" id="progressContainer">
-        <div class="progress-bar" id="progressBar"></div>
+  
+  <header>
+    <h1>BenjiBot</h1>
+    <p>Der leistungsstarke Discord Bot für Moderation, Musik, Wirtschaft & Spaß</p>
+    <a class="btn" href="#invite">Zu Discord hinzufügen</a>
+  </header>
+  
+  <nav>
+    <a href="#features">Features</a>
+    <a href="#commands">Befehle</a>
+    <a href="#faq">FAQ</a>
+    <a href="#support">Support</a>
+  </nav>
+  
+  <section id="features">
+    <h2>Features</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>Moderation</h3>
+        <p>Ban, Kick, Warn, AutoMod & mehr, um deine Community sauber zu halten.</p>
+      </div>
+      <div class="feature">
+        <h3>Musik</h3>
+        <p>Hoche Qualität Audio, Playlists, Queue, mehrere Quellen (YouTube, Spotify etc.).</p>
+      </div>
+      <div class="feature">
+        <h3>Economy / Wirtschaft</h3>
+        <p>Jobs, Shop, Bank, tägliche Belohnungen – baue dein eigenes System auf.</p>
+      </div>
+      <div class="feature">
+        <h3>Fun & Spiele</h3>
+        <p>Interaktive Befehle, Spiele, Minispiele & mehr für die Community.</p>
+      </div>
+      <div class="feature">
+        <h3>Tickets & Support</h3>
+        <p>Erstelle Tickets direkt im Server für Anfragen oder Fehlerberichte.</p>
+      </div>
+      <div class="feature">
+        <h3>Levels & XP</h3>
+        <p>Belohne aktive Nutzer mit Erfahrungspunkten, Ranglisten und Preisen.</p>
+      </div>
     </div>
+  </section>
+  
+  <section id="commands">
+    <h2>Beispiele für Befehle</h2>
+    <ul>
+      <li><strong>/ban</strong> – Bannt ein Mitglied vom Server</li>
+      <li><strong>/kick</strong> – Kickt ein Mitglied</li>
+      <li><strong>/play &lt;Song&gt;</strong> – Spielt Musik ab</li>
+      <li><strong>/queue</strong> – Zeigt die aktuelle Musikwarteschlange</li>
+      <li><strong>/balance</strong> – Zeigt dein Kontostand im Economy-System</li>
+      <li><strong>/ticket</strong> – Erstellt ein Support-Ticket</li>
+      <li><strong>/level</strong> – Zeigt dein aktuelles Level / XP</li>
+      <li><strong>/help</strong> – Zeigt alle Befehle an</li>
+    </ul>
+  </section>
+  
+  <section id="faq">
+    <h2>Häufige Fragen</h2>
+    <h3>Was ist BenjiBot?</h3>
+    <p>BenjiBot ist ein vielseitiger Discord‑Bot, der Moderation, Musik, Wirtschaftssysteme und Spaß kombiniert.</p>
+    <h3>Wie lade ich BenjiBot auf meinen Server ein?</h3>
+    <p>Klicke oben auf „Zu Discord hinzufügen“ und folge den Anweisungen. Du benötigst Administratorrechte.</p>
+    <h3>Was kostet BenjiBot?</h3>
+    <p>Die Grundfunktionen sind kostenlos. Zukünftige Premium‑Features sind in Planung.</p>
+    <h3>Wo bekomme ich Support?</h3>
+    <p>Du kannst unseren Support‑Server besuchen oder uns per Direktnachricht kontaktieren.</p>
+  </section>
+  
+  <section id="support">
+    <h2>Support & Kontakt</h2>
+    <p>Wenn du Fragen hast, Probleme siehst oder Vorschläge machen willst, tret unserem Support‑Server bei:</p>
+    <a class="btn" href="DEIN_SUPPORT_LINK_HIER">Support Server beitreten</a>
+  </section>
+  
+  <footer>
+    <p>© 2025 BenjiBot. Alle Rechte vorbehalten.</p>
+  </footer>
 
-    <div id="status"></div>
-
-    <footer>© 2025 DownloadMoreRam Inc. – Garantiert nicht funktionierend 🛠️</footer>
-
-    <script>
-        const button = document.getElementById("downloadBtn");
-        const progressBar = document.getElementById("progressBar");
-        const progressContainer = document.getElementById("progressContainer");
-        const statusText = document.getElementById("status");
-
-        const steps = [
-            "Starte RAM-Download...",
-            "Verbindung zum RAM-Server wird aufgebaut...",
-            "Anfrage nach mehr RAM gesendet...",
-            "Download wird vorbereitet...",
-            "Virtuelle Speicherzellen werden formatiert...",
-            "64MB... 128MB... 256MB...",
-            "RAM-Pakete werden dekomprimiert...",
-            "Finalisiere Installation...",
-            "Fast fertig...",
-            "Download abgeschlossen. Genieße deinen zusätzlichen RAM! 😉"
-        ];
-
-        button.addEventListener("click", () => {
-            button.disabled = true;
-            progressContainer.style.display = "block";
-            let progress = 0;
-            let stepIndex = 0;
-
-            const interval = setInterval(() => {
-                if (progress >= 100) {
-                    clearInterval(interval);
-                    statusText.textContent = steps[steps.length - 1];
-                    return;
-                }
-
-                progress += Math.floor(Math.random() * 10) + 5;
-                if (progress > 100) progress = 100;
-
-                progressBar.style.width = progress + "%";
-
-                if (stepIndex < steps.length - 1) {
-                    statusText.textContent = steps[stepIndex];
-                    stepIndex++;
-                }
-
-            }, 800);
-        });
-    </script>
 </body>
 </html>
